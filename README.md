@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# ecozest
+# Ecozest Website
 =======
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
->>>>>>> 573be61 (Initial commit: EcoZest website project)
+The Ecozest website stands as a perfect blend of modern web technology and eco-conscious business innovation. Built using Vue.js and powered by Vite.js, the site delivers a fast, smooth, and highly interactive user experience. Vite’s lightning-fast hot module replacement ensures a seamless development process and quick load times, while Vue’s reactive components make the UI feel alive and responsive. This tech stack not only supports the site's performance but also aligns well with Ecozest’s clean and minimal design—a reflection of the brand’s focus on simplicity, sustainability, and transparency.
