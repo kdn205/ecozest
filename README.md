@@ -1,3 +1,3 @@
 # Ecozest Website
-=======
+<br>
 The Ecozest website stands as a perfect blend of modern web technology and eco-conscious business innovation. Built using Vue.js and powered by Vite.js, the site delivers a fast, smooth, and highly interactive user experience. Vite’s lightning-fast hot module replacement ensures a seamless development process and quick load times, while Vue’s reactive components make the UI feel alive and responsive. This tech stack not only supports the site's performance but also aligns well with Ecozest’s clean and minimal design—a reflection of the brand’s focus on simplicity, sustainability, and transparency.
