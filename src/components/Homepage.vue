@@ -109,9 +109,12 @@
                     </div>
                   </div>
                 </section>
+
                 <main>
-                 <section class="mt-8 text-center">
-                   <a class="text-green-600 font-semibold text-sm" href="https://www.facebook.com/nugtyi/">Thương Hiệu của Ecozest trên Shopee</a>
+                 <section class="mt-8 text-center inline-block">
+                   <a class="inline-block px-6 py-2 border-2 border-[#0f1e3c] rounded-full text-[#0f1e3c] 
+                   font-semibold text-sm hover:bg-[#0f1e3c] hover:text-white transition" 
+                   href="https://www.facebook.com/nugtyi/">Thương Hiệu của Ecozest trên Shopee</a>
                  </section>
                 
           <!--product section-->
