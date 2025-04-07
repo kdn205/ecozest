@@ -81,7 +81,7 @@
 
         <!-- Slideshow Section -->
         <section class="mt-2 relative overflow-hidden">
-          <div class="relative h-[456px] max-w-[736px] mx-auto">
+          <div class="relative h-[514px] max-w-[1080px] mx-auto">
             <transition-group name="slide" tag="div" class="relative h-full w-full">
                 <div v-for="(slide, index) in slides" :key="slide.id" v-show="currentSlide === index" 
                      class="absolute w-full h-full">
@@ -195,12 +195,12 @@ export default {
       slides: [
         {
           id: 1,
-          image: '/land_img/img-1.jpg', // Ensure this path is correct
+          image: '/land_img/doggo-1.jpg', // Ensure this path is correct
           title: 'Ecozest Landing'
         },
         {
           id: 2,
-          image: '/land_img/img-2.jpg',
+          image: '/land_img/doggo-2.jpg',
           title: 'Ecozest Products'
         },
         {
