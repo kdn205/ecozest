@@ -166,17 +166,17 @@ export default {
       slides: [
         {
           id: 1,
-          image: '/src/assets/land_img/img-1.jpg',
+          image: '/land_img/img-1.jpg', // Use absolute path
           title: 'Ecozest Landing'
         },
         {
           id: 2,
-          image: '/src/assets/land_img/img-2.jpg',
+          image: '/land_img/img-2.jpg',
           title: 'Ecozest Products'
         },
         {
           id: 3,
-          image: '/src/assets/land_img/img-3.jpg',
+          image: '/land_img/img-3.jpg',
           title: 'Ecozest Vision'
         }
       ],
