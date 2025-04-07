@@ -3,8 +3,13 @@
       <div class="w-full">
         <!-- Header -->
         <header class="flex items-center justify-between p-4 border-b bg-white shadow-md fixed top-0 left-0 w-full z-10">
-          <div class="text-lg text-green font-bold w-1/4">LOGO HERE</div>
-          <nav class="hidden md:flex flex-1 justify-center">
+          <!-- Logo -->
+          <a href="https://www.facebook.com/nugtyi/" class="justify-between flex">
+            <img src="/src/assets/icon/logo-eco.jpg" class="w-10 h-auto justify-between flex-1" alt="Logo"/>
+          </a>
+
+          <!-- Navigation Links -->
+          <nav class="hidden md:flex justify-start pl-10">
             <div class="flex items-center space-x-12">
               <a href="#" class="hover:text-green-600 transition-colors duration-200 py-2">Home</a>
               <div
@@ -19,9 +24,9 @@
                   @mouseenter="cancelHideStoryDropdown"
                   @mouseleave="hideStoryDropdownWithDelay"
                 >
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">About us</a>
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">Our Vision</a>
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">Our Team</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">About us</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">Our Vision</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">Our Team</a>
                 </div>
               </div>
               <div
@@ -36,15 +41,17 @@
                   @mouseenter="cancelHideProductDropdown"
                   @mouseleave="hideProductDropdownWithDelay"
                 >
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">Cleaning</a>
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">Spray</a>
-                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200 text-center">Car Care</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">Cleaning</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">Spray</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">Car Care</a>
                 </div>
               </div>
-              <a href="#" class="hover:text-green-600 transition-colors duration-200 py-2">Contact Us</a>
+              <a href="#" class="hover:text-green-600 transition-colors duration-200">Contact Us</a>
             </div>
           </nav>
-          <div class="flex space-x-2 w-1/4 justify-end">
+
+          <!-- Search Bar -->
+          <div class="flex items-center space-x-2">
             <input type="text" placeholder="Search" class="border p-2 rounded bg-gray-50 w-48 text-black hidden md:block" />
             <!-- Hamburger Menu -->
             <button class="md:hidden" @click="toggleMobileMenu">
