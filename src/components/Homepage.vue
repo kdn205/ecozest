@@ -4,7 +4,7 @@
         <!-- Header -->
         <header class="flex items-center justify-between p-4 border-b bg-white shadow-md fixed top-0 left-0 w-full z-10">
           <div class="text-lg text-green font-bold w-1/4">LOGO HERE</div>
-          <nav class="flex-1 flex justify-center">
+          <nav class="hidden md:flex flex-1 justify-center">
             <div class="flex items-center space-x-12">
               <a href="#" class="hover:text-green-600 transition-colors duration-200 py-2">Home</a>
               <div
@@ -45,11 +45,33 @@
             </div>
           </nav>
           <div class="flex space-x-2 w-1/4 justify-end">
-            <input type="text" placeholder="Search" class="border p-2 rounded bg-gray-50 w-48 text-black" />
+            <input type="text" placeholder="Search" class="border p-2 rounded bg-gray-50 w-48 text-black hidden md:block" />
+            <!-- Hamburger Menu -->
+            <button class="md:hidden" @click="toggleMobileMenu">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
           </div>
         </header>
-  
-        
+
+        <!-- Mobile Menu -->
+        <div v-if="isMobileMenuOpen" class="md:hidden fixed top-0 left-0 w-full h-full bg-black/50 z-20">
+          <div class="bg-white w-3/4 h-full p-4">
+            <button class="mb-4" @click="toggleMobileMenu">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <ul class="space-y-4">
+              <li><a href="#" class="block text-black hover:text-green-600">Home</a></li>
+              <li><a href="#" class="block text-black hover:text-green-600">Our Story</a></li>
+              <li><a href="#" class="block text-black hover:text-green-600">Our Product</a></li>
+              <li><a href="#" class="block text-black hover:text-green-600">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
         <!-- Slideshow Section -->
         <section class="mt-2 relative overflow-hidden">
           <div class="relative h-[456px] max-w-[736px] mx-auto">
@@ -166,7 +188,7 @@ export default {
       slides: [
         {
           id: 1,
-          image: '/land_img/img-1.jpg', // Use absolute path
+          image: '/land_img/img-1.jpg', // Ensure this path is correct
           title: 'Ecozest Landing'
         },
         {
@@ -180,13 +202,19 @@ export default {
           title: 'Ecozest Vision'
         }
       ],
-      slideInterval: null
+      slideInterval: null,
+      isMobileMenuOpen: false, // State for mobile menu
     };
   },
   methods: {
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
     showStoryDropdown() {
       const dropdown = this.$refs.storyDropdown;
-      dropdown.classList.remove("hidden");
+      if (dropdown) {
+        dropdown.classList.remove("hidden");
+      }
       if (this.storyHideTimeout) {
         clearTimeout(this.storyHideTimeout);
         this.storyHideTimeout = null;
@@ -195,7 +223,9 @@ export default {
     hideStoryDropdownWithDelay() {
       this.storyHideTimeout = setTimeout(() => {
         const dropdown = this.$refs.storyDropdown;
-        dropdown.classList.add("hidden");
+        if (dropdown) {
+          dropdown.classList.add("hidden");
+        }
       }, 200);
     },
     cancelHideStoryDropdown() {
@@ -206,7 +236,9 @@ export default {
     },
     showProductDropdown() {
       const dropdown = this.$refs.productDropdown;
-      dropdown.classList.remove("hidden");
+      if (dropdown) {
+        dropdown.classList.remove("hidden");
+      }
       if (this.productHideTimeout) {
         clearTimeout(this.productHideTimeout);
         this.productHideTimeout = null;
@@ -215,7 +247,9 @@ export default {
     hideProductDropdownWithDelay() {
       this.productHideTimeout = setTimeout(() => {
         const dropdown = this.$refs.productDropdown;
-        dropdown.classList.add("hidden");
+        if (dropdown) {
+          dropdown.classList.add("hidden");
+        }
       }, 200);
     },
     cancelHideProductDropdown() {
@@ -245,6 +279,12 @@ export default {
   },
   beforeUnmount() {
     this.stopSlideshow();
+    if (this.storyHideTimeout) {
+      clearTimeout(this.storyHideTimeout);
+    }
+    if (this.productHideTimeout) {
+      clearTimeout(this.productHideTimeout);
+    }
   }
 };
 </script>
@@ -276,4 +316,6 @@ main {
   transform: translateX(0);
   opacity: 1;
 }
+
+/* Add styles for the mobile menu overlay */
 </style>
