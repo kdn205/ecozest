@@ -45,7 +45,7 @@
             </div>
           </nav>
           <div class="flex space-x-2 w-1/4 justify-end">
-            <input type="text" placeholder="Search" class="border p-2 rounded bg-gray-50 w-48" />
+            <input type="text" placeholder="Search" class="border p-2 rounded bg-gray-50 w-48 text-black" />
           </div>
         </header>
   
