@@ -208,7 +208,7 @@ export default {
         },
         {
           id: 3,
-          image: '/land_img/img-3.jpg',
+          image: '/land_img/Retargeting.jpg',
           title: 'Ecozest Vision'
         }
       ],
